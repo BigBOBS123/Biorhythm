@@ -53,7 +53,14 @@ private:
 
     int GetDiffernce(){
         struct std::tm b = { 0,0,0, Current_Day, Current_Month, Current_Year + 100 };
-        struct std::tm a = { 0,0,0,Birth_Day, Birth_Month, Birth_Year +100 };
+        struct std::tm a;
+        if (Birth_Year < 25)
+        {
+            a = { 0,0,0,Birth_Day, Birth_Month, Birth_Year + 100 };
+        }
+        else {
+            a = { 0,0,0,Birth_Day, Birth_Month, Birth_Year };
+        }
         std::time_t x = std::mktime(&a);
         std::time_t y = std::mktime(&b);
         if (x != (std::time_t)(-1) && y != (std::time_t)(-1))
