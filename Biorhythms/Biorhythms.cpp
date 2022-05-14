@@ -43,11 +43,7 @@ private:
         std::cout << "Your emotional percentage was: " << Percent_28 << std::endl;
         std::cout << "Your physical percentage was: " << Percent_23 << std::endl;
         std::cout << "Your intellectual percentage was: " << Percent_33 << std::endl;
-        //std::cout << "" << std::endl;
         std::cout << "Your overall average percentage was: " << AveragePercent << std::endl;
-
-
-
     }
 
     float GetAvg() {
@@ -133,5 +129,8 @@ int main()
 
     Biorhythms MainBio(day_born, month_born, year_born, day_check, month_check, year_check);
     MainBio.Main();
+    int n;
+    std::cin >> n;
+    std::cin >> n;
 }
 
