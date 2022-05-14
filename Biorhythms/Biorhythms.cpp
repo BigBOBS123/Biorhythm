@@ -59,8 +59,6 @@ private:
         if (x != (std::time_t)(-1) && y != (std::time_t)(-1))
         {
             double difference = std::difftime(y, x) / (60 * 60 * 24);
-            std::cout << std::ctime(&x);
-            std::cout << std::ctime(&y);
             return difference;
         }
     }
@@ -130,7 +128,6 @@ int main()
     Biorhythms MainBio(day_born, month_born, year_born, day_check, month_check, year_check);
     MainBio.Main();
     int n;
-    std::cin >> n;
     std::cin >> n;
 }
 
